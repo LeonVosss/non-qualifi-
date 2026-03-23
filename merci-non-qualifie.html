@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merci pour votre intérêt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!--
+═══════════════════════════════════════════════════════
+PAGE NON QUALIFIÉ — PAS DE PIXEL ICI
+═══════════════════════════════════════════════════════
+Cette page s'affiche pour :
+- Les locataires (pas propriétaires)
+- Les personnes "juste en train de se renseigner"
+
+Aucun pixel Google Ads ici → Google ne compte pas
+cette personne comme conversion → Google ne cible
+pas d'autres personnes avec ce profil → Coût par
+lead qualifié reste bas.
+═══════════════════════════════════════════════════════
+-->
+
+<style>
+  :root {
+    --black: #080808;
+    --white: #F5F3EE;
+    --orange: #F59E0B;
+    --orange-dim: rgba(245,158,11,0.08);
+    --orange-border: rgba(245,158,11,0.2);
+    --gray: #8C8C8C;
+    --border: rgba(245,243,238,0.08);
+    --blue: #1A56DB;
+    --blue-light: #3B72F0;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { min-height: 100%; background: var(--black); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0; opacity: 0.4;
+  }
+  body::after {
+    content: ''; position: fixed; top: -30%; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(245,158,11,0.04) 0%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+
+  .logo { position: fixed; top: 28px; left: 40px; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 0.12em; color: var(--white); opacity: 0.9; z-index: 10; }
+
+  .wrapper { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px 60px; }
+
+  .container { width: 100%; max-width: 480px; animation: fadeUp 0.6s cubic-bezier(0.4,0,0.2,1) forwards; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ICON */
+  .icon-wrap { width: 72px; height: 72px; border-radius: 50%; background: var(--orange-dim); border: 1px solid var(--orange-border); display: flex; align-items: center; justify-content: center; margin-bottom: 26px; animation: fadeUp 0.5s ease both; font-size: 28px; }
+
+  /* TITLE */
+  .title { font-family: 'Syne', sans-serif; font-size: clamp(24px,4.5vw,36px); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .subtitle { font-size: 15px; color: var(--gray); line-height: 1.75; margin-bottom: 32px; }
+
+  /* INFO BOX */
+  .info-box { background: rgba(255,255,255,0.025); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; display: flex; gap: 14px; align-items: flex-start; }
+  .info-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+  .info-content { font-size: 13px; color: var(--gray); line-height: 1.6; }
+  .info-content strong { color: var(--white); font-weight: 500; display: block; margin-bottom: 3px; }
+
+  /* DIVIDER */
+  .divider { height: 1px; background: var(--border); margin: 24px 0; }
+
+  /* FUTURE BOX */
+  .future-box { background: rgba(26,86,219,0.06); border: 1px solid rgba(26,86,219,0.15); border-radius: 12px; padding: 20px 22px; }
+  .future-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+  .future-sub { font-size: 13px; color: var(--gray); line-height: 1.65; margin-bottom: 16px; }
+  .future-link { display: inline-flex; align-items: center; gap: 7px; color: #7BA7F7; font-size: 13px; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(123,167,247,0.3); padding-bottom: 1px; transition: all 0.2s; }
+  .future-link:hover { color: var(--blue-light); border-color: var(--blue-light); }
+
+  .footer { margin-top: 36px; text-align: center; font-size: 12px; color: rgba(140,140,140,0.3); }
+
+  @media(max-width:600px) { .logo{left:20px;top:20px} .wrapper{padding:70px 20px 40px} }
+</style>
+</head>
+<body>
+<div class="logo">KAIRO</div>
+<div class="wrapper">
+  <div class="container">
+
+    <div class="icon-wrap">↗</div>
+
+    <h1 class="title">Merci pour votre intérêt.</h1>
+    <p class="subtitle">Votre profil ne correspond pas aux critères actuels de notre réseau d'installateurs dans votre zone. Nous ne pouvons pas vous mettre en relation pour l'instant.</p>
+
+    <div class="info-box">
+      <span class="info-icon">🏠</span>
+      <div class="info-content">
+        <strong>Vous êtes locataire ?</strong>
+        Parlez à votre propriétaire — certains acceptent d'installer des panneaux solaires si le locataire prend en charge une partie du coût ou bénéficie des économies.
+      </div>
+    </div>
+
+    <div class="info-box">
+      <span class="info-icon">📋</span>
+      <div class="info-content">
+        <strong>Vous êtes en copropriété ?</strong>
+        L'installation collective est possible avec un vote en assemblée générale. Renseignez-vous auprès de votre syndic sur les démarches.
+      </div>
+    </div>
+
+    <div class="info-box">
+      <span class="info-icon">⏳</span>
+      <div class="info-content">
+        <strong>Votre projet n'est pas encore défini ?</strong>
+        Prenez le temps de comparer les offres et de vous renseigner sur les aides disponibles (MaPrimeRénov', TVA à 10%, primes CEE).
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="future-box">
+      <p class="future-title">Votre situation changera peut-être 👋</p>
+      <p class="future-sub">Si vous devenez propriétaire ou que votre projet se précise, vous pouvez refaire une demande à tout moment. Notre réseau couvre plus de 50 villes en France.</p>
+      <a class="future-link" href="javascript:history.back()">← Refaire une demande</a>
+    </div>
+
+    <p class="footer">Kairo × Inovagreen — Merci pour votre temps</p>
+  </div>
+</div>
+</body>
+</html>
